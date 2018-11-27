@@ -1,0 +1,129 @@
+= Asciidoctor Document Title
+Doc Writer <doc.writer@asciidoc.org>
+v1.0, 2012-01-01
+:imagesdir: ./images
+:iconsdir: ./icons
+:stylesdir: ./styles
+:scriptsdir: ./js
+
+:toc: left
+
+== Paragraphs
+
+This journey begins one late Monday afternoon in Antwerp.
+Our team desperately needs coffee, +
+but none of us dare open the office door.
+
+A second paragraph.
+
+== Admonitions
+
+NOTE: A note
+
+IMPORTANT: Very important
+
+CAUTION: Caution
+
+WARNING: Warning, be careful about that
+
+== Quoted text
+
+Make some *emphasis*
+
+Make some _italic_
+
+Make some `quoted text`
+
+Is it possible to `*compose things*`
+
+```
+A quoted paragraph as in markdown
+```
+
+== Lists
+
+.A list with a title
+* One
+** Two
+*** Three
+
+.Description list
+CPU:: The brain of the computer.
+Hard drive:: Permanent storage for operating system and/or user files.
+RAM:: Temporarily stores information the CPU uses during operation.
+Keyboard:: Used to enter text or control items on the screen.
+Mouse:: Used to point to and select items on your computer screen.
+Monitor:: Displays information in visual form using text and graphics.
+
+.Horizontal description list
+[horizontal]
+CPU:: The brain of the computer.
+Hard drive:: Permanent storage for operating system and/or user files.
+RAM:: Temporarily stores information the CPU uses during operation.
+
+== Links and images
+
+http://an_url.com +
+an-email@domain.com +
+
+image::742px-Jenkins_logo.svg-2.png[Jenkins,100]
+
+
+== Code
+
+[source,ruby]
+----
+require 'asciidoctor'
+
+puts Asciidoctor.convert_file 'mysample.adoc', to_file: false
+----
+
+[source,bash]
+----
+echo $PATH
+docker login $DTR_FQDN  # <1>
+docker container run nginx  # <2>
+----
+<1> Login to DTR
+<2> Run a container
+
+== Table
+
+[cols=2*]
+|===
+|Tools |Description
+
+|Firefox
+|Web Browser
+
+|Ruby
+|Programming Language
+
+|TorqueBox
+|Application Server
+|===
+
+
+
+[cols="2,3,5"]
+|===
+|Name |Group |Description
+
+|Firefox
+|Web Browser
+|Mozilla Firefox is an open-source web browser.
+It's designed for standards compliance,
+performance and portability.
+
+|Ruby
+|Programming Language
+|A programmer's best friend.
+|===
+
+
+[%header,format=csv]
+|===
+Artist,Track,Genre
+Baauer,Harlem Shake,Hip Hop
+The Lumineers,Ho Hey,Folk Rock
+|===
